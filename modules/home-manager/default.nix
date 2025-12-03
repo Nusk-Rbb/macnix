@@ -5,6 +5,7 @@
     ./dotfiles/fish
     ./dotfiles/git
     ./dotfiles/alacritty
+    # ./dotfiles/fastfetch
   ];
 
   home = {
@@ -29,6 +30,7 @@
       gh
       pv
       ffmpeg
+      nixfmt
       neovim
     ];
   };
