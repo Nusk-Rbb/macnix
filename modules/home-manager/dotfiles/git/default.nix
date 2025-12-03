@@ -12,7 +12,7 @@
       core = {
         editor = "vim";
       };
-      commit.template = "~/.config/git/commit_template";
+      commit.template = "./commit_template";
     };
 
 

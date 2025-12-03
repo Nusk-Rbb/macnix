@@ -29,6 +29,7 @@
       gh
       pv
       ffmpeg
+      neovim
     ];
   };
 
