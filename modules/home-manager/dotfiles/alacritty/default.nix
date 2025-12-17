@@ -15,6 +15,12 @@
         };
         decorations = "none";
       };
+      font = {
+        normal = {
+          family = "FiraCode Nerd Font";
+          style = "Regular";
+        };
+      };
       window.opacity = 0.7;
     };
 

@@ -5,7 +5,7 @@
     ./dotfiles/fish
     ./dotfiles/git
     ./dotfiles/alacritty
-    ./dotfiles/fonts
+    # ./dotfiles/fonts
   ];
 
   home = {
@@ -30,8 +30,8 @@
       gh
       pv
       ffmpeg
-      nixfmt
       nil
+      nixfmt
       fastfetch
       neovim
     ];
@@ -62,5 +62,4 @@
       };
     };
   };
-#  home.file.".inputrc".source = ./dotfiles/inputrc;
 }
