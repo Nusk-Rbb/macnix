@@ -8,7 +8,7 @@
   users = {
     users = {
       nusk = {
-        shell = pkgs.fish;
+        shell = pkgs.zsh;
         home = "/Users/nusk"; # Replace USER_NAME with your username
       };
     };

@@ -12,7 +12,7 @@
       core = {
         editor = "vim";
       };
-      commit.template = "./commit_template";
+      commit.template = "~/.config/github/commit_template";
     };
 
 
@@ -25,5 +25,11 @@
       ".vscode" # VS Code settings
       ".idea" # IntelliJ settings
     ];
+  };
+
+  home = {
+    file = {
+    	".config/github/commit_template".source = ./commit_template;
+    };
   };
 }
