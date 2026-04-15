@@ -8,7 +8,7 @@
   users = {
     users = {
       nusk = {
-        shell = pkgs.zsh;
+        shell = pkgs.fish;
         home = "/Users/nusk"; # Replace USER_NAME with your username
       };
     };
@@ -47,7 +47,7 @@
   };
 
   # backwards compatibility; don't change
-  system.stateVersion = 4;
+  system.stateVersion = 26.3;
 
   home-manager.backupCommand = "${pkgs.trash-cli}/bin/trash";
 }

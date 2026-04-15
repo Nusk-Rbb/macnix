@@ -1,65 +1,64 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./dotfiles/fish
     ./dotfiles/git
-    ./dotfiles/alacritty
-    # ./dotfiles/fonts
+    ./dotfiles/github
+    ./dotfiles/ssh
+    ./dotfiles/ghostty
+    ./dotfiles/fonts
   ];
 
-  home = {
-    stateVersion = "25.05";
-    sessionVariables = {
-      LANG = "en_US.UTF-8";
-      LC_CTYPE = "en_US.UTF-8";
-      LC_ALL = "en_US.UTF-8";
-      EDITOR = "nvim";
-      PAGER = "less -FirSwX";
-      SHELL = "fish";
-      CLICLOLOR = 1;
-      # MANPAGER = "nvim -c 'set ft=man' -";
-      TERM = "xterm-256color";
-    };
+  nixpkgs.config.allowUnfree = true;
 
-    packages = with pkgs; [
-      ripgrep
-      fd
-      curl
-      less
-      gh
-      pv
-      ffmpeg
-      nil
-      nixfmt
-      fastfetch
-      neovim
-    ];
+  home.stateVersion = "25.05";
+
+  home.sessionVariables = {
+    LANG = "en_US.UTF-8";
+    LC_CTYPE = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
+    EDITOR = "nvim";
+    PAGER = "less -FirSwX";
+    SHELL = "fish";
+    CLICLOLOR = 1;
+    TERM = "xterm-256color";
   };
 
-  programs = {
-    jq.enable = true;
-    command-not-found.enable = true;
-    htop.enable = true;
-    info.enable = true;
+  home.packages = with pkgs; [
+    ripgrep
+    claude-code
+    fd
+    curl
+    less
+    gh
+    pv
+    ffmpeg
+    nil
+    nixfmt
+    fastfetch
+    neovim
+  ];
 
-    dircolors = {
-      enable = true;
-      enableFishIntegration = true;
-      enableZshIntegration = true;
-    };
+  programs.jq.enable = true;
+  programs.command-not-found.enable = true;
+  programs.htop.enable = true;
+  programs.info.enable = true;
 
-    fzf = {
-      enable = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-    };
+  programs.dircolors = {
+    enable = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+  };
 
-    direnv = {
-      enable = true;
-      nix-direnv = {
-        enable = true;
-      };
-    };
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 }
