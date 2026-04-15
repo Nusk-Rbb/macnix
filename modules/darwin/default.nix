@@ -47,7 +47,7 @@
   };
 
   # backwards compatibility; don't change
-  system.stateVersion = 25.11;
+  system.stateVersion = 6;
 
   home-manager.backupCommand = "${pkgs.trash-cli}/bin/trash";
 }

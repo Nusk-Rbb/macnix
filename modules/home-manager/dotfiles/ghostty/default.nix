@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.ghostty = {
+  programs.ghostty-bin = {
     enable = true;
     settings = {
       term = "xterm-256color";

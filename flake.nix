@@ -7,6 +7,8 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    mac-app-util.url = "github:hraban/mac-app-util";
+
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -16,6 +18,7 @@
       nixpkgs,
       home-manager,
       darwin,
+      mac-app-util,
       ...
     }:
     {
@@ -25,11 +28,17 @@
           ./modules/darwin
           home-manager.darwinModules.home-manager
           {
+            nixpkgs.config.allowUnfree = true;
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.nusk.imports = [ ./modules/home-manager ];
+              users.nusk.imports = [
+                ./modules/home-manager
+              ];
             };
+            home-manager.sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
           }
         ];
       };

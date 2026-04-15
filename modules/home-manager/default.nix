@@ -1,18 +1,18 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   imports = [
     ./dotfiles/fish
     ./dotfiles/git
-    ./dotfiles/github
-    ./dotfiles/ssh
-    ./dotfiles/ghostty
-    ./dotfiles/fonts
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  home.stateVersion = "25.11";
 
-  home.stateVersion = "25.05";
+  home.homeDirectory = lib.mkForce "/Users/nusk";
 
   home.sessionVariables = {
     LANG = "en_US.UTF-8";
@@ -22,6 +22,7 @@
     PAGER = "less -FirSwX";
     SHELL = "fish";
     CLICLOLOR = 1;
+    # MANPAGER = "nvim -c 'set ft=man' -";
     TERM = "xterm-256color";
   };
 
@@ -38,7 +39,10 @@
     nixfmt
     fastfetch
     neovim
+    ghostty-bin
   ];
+
+  programs.home-manager.enable = true;
 
   programs.jq.enable = true;
   programs.command-not-found.enable = true;
@@ -59,6 +63,8 @@
 
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;
+    nix-direnv = {
+      enable = true;
+    };
   };
 }
