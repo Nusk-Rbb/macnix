@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  programs.ghostty-bin = {
+  programs.ghostty = {
     enable = true;
+    package = pkgs.ghostty-bin;
     settings = {
       theme = "Idle Toes";
       font-family = "FiraCode Nerd Font";

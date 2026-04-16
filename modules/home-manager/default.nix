@@ -8,6 +8,7 @@
   imports = [
     ./dotfiles/fish
     ./dotfiles/git
+    ./dotfiles/ghostty
   ];
 
   home.stateVersion = "25.11";
@@ -37,6 +38,7 @@
     ffmpeg
     nil
     nixfmt
+    nixd
     fastfetch
     neovim
     ghostty-bin
