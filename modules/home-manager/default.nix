@@ -11,7 +11,7 @@
     ./dotfiles/ghostty
   ];
 
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   home.homeDirectory = lib.mkForce "/Users/nusk";
 
