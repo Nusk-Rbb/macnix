@@ -8,6 +8,7 @@
   imports = [
     ./dotfiles/fish
     ./dotfiles/git
+    ./dotfiles/github
     ./dotfiles/ghostty
   ];
 

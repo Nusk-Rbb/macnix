@@ -15,7 +15,7 @@
       "github.com" = {
         hostname = "github.com";
         user = "git";
-        identityFile = "~/.ssh/github";
+        identityFile = "~/.ssh/nusk_git";
         identitiesOnly = true;
       };
     };
