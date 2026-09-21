@@ -25,7 +25,7 @@
       darwinConfigurations.M2-MacBook-Pro = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         modules = [
-          ./modules/darwin
+          ./darwin
           home-manager.darwinModules.home-manager
           {
             nixpkgs.config.allowUnfree = true;
@@ -33,7 +33,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.nusk.imports = [
-                ./modules/home-manager
+                ./home-manager
               ];
             };
             home-manager.sharedModules = [

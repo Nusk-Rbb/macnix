@@ -37,12 +37,10 @@
     gh
     pv
     ffmpeg
-    nil
     nixfmt
     nixd
     fastfetch
     neovim
-    ghostty-bin
   ];
 
   programs.home-manager.enable = true;
