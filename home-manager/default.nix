@@ -41,6 +41,7 @@
     nixd
     fastfetch
     neovim
+    nodejs
   ];
 
   programs.home-manager.enable = true;
