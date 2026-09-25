@@ -6,10 +6,11 @@
 
 {
   imports = [
-    ./dotfiles/fish
-    ./dotfiles/git
-    ./dotfiles/github
-    ./dotfiles/ghostty
+    ./fish
+    ./git
+    ./github
+    ./ghostty
+    ./claude
   ];
 
   home.stateVersion = "26.05";
