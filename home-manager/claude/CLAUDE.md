@@ -1,5 +1,5 @@
 まず初めに、ここを読み込んでから作業を始めてください
-G:\マイドライブ\Documents\nusk context vault
+~/Google Drive/My Drive/Documents/nusk context vault
 読み込めない場合はGoogle Drive経由で以下を読み込んでください（これ以外のファイルへの書き込み、読み込みは禁止です）
 nusk context vault
 
